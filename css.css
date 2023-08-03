@@ -1,0 +1,498 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2021, 2:29:08 AM
+    Author     : kulas
+*/
+
+/*@import url('https://fonts.googleapis.com/
+css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #111;
+}
+section{
+    position: relative;
+    padding: 100px;
+}
+.section_sub{
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*.logo{
+    position: fixed;
+}*/
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+.header_sub{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_sub .logo{
+    position: fixed;
+    font-size: 2em;
+    color: #fff;
+
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+/*.header_sub .toggle img{
+    max-width: 40px;
+    cursor: pointer;
+}*/
+
+.header_sub .toggle{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin-right: 60px;
+    background: url(img/menu.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_sub .toggle.active{
+    background: url(img/close.png);
+    top: 20px;
+    right: 3px;
+    margin-right: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 25px;
+}
+.header_sub .toggle.active:before{
+    content: 'Close';
+}
+.header_sub .toggle:before {
+    content: 'Menu';
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    margin-right: 60px;
+    right: 45px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 2px 5px;
+    background-color: #fff;
+    color: #111;
+    visibility: visible;
+}
+.glass{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    box-shadow: 10px 0 15px rgba(0,0,0,0.1);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+section.active .glass{
+    width: 100%;      
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+    transition-delay: 0s;
+}
+
+section .navigation{
+    position: fixed;
+    top: 34%;
+    left: 44%;
+
+    z-index: 100;
+}
+section .navigation li{
+    list-style: none;
+    text-align: center;
+    margin: 15px 0;   
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateX(200px);
+    transition-delay: calc(0.2s * var(--j));
+}
+section.active .navigation li{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
+section .navigation li a{
+    color: #111;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+}
+section .navigation li a:hover{
+    background-color: #111;
+    color: #fff;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+}
+
+
+
+/*banner style*/
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.banner .content{
+    position: relative;
+    max-height: 900px;
+    text-align: center;
+    z-index: 1;
+}
+.banner .content h2{
+    color: #fff;
+    font-size: 5em;
+}
+.banner .content p{
+    color: #fff;
+    font-size: 1.2em;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+.fitBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.about{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .contentBx{
+    min-width: 50%;
+    width: 50%;
+    text-align: end;
+    padding-right: 40px;
+}
+.titleText{
+    font-weight: 600;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.text{
+    color: #fff;
+    font-size: 1em;
+}
+.about .imbBx{
+    position: relative;
+    min-width: 50%;
+    width: 50%;
+    min-height: 500px;
+}
+
+/*banner2 style*/
+.banner2,
+.banner3{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner2:before,
+.banner3:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #111, transparent);
+}
+.banner2:after,
+.banner3:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to bottom, #111, transparent);
+}
+.banner_video{
+    position: relative;
+    width: 80%;
+    min-height: 60vh;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+}
+
+/*Destination list */
+.destination{
+    text-align: center;
+    text-decoration: none;
+}
+.destination .box .content{
+    text-decoration: none;
+    color: #ffffff;
+}
+.destination .content{
+    text-align: center;
+}
+.destination .destinationList{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.destination .destinationList .box{
+    position: relative;
+    min-width: 350px;
+    height: 480px;
+    background-color: #191919;
+    transition: 0.5s;
+    margin: 10px;
+}
+.destination .destinationList:hover .box{
+    opacity: 0.2;
+}
+.destination .destinationList .box:hover{
+    opacity: 1;
+}
+.destination .destinationList .box .imbBx{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.destination .destinationList .box .content{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.destination .destinationList .box .content h2{
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.destination .destinationList .box .content h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer .sci{
+    position: relative;
+    display: flex;
+}
+.footer .sci li{
+    list-style: none;
+}
+.footer .sci li a{
+    text-decoration: none;
+    margin: 0 20px;
+}
+.footer .sci li a img{
+    filter: invert(1);
+    max-width: 40px;
+}
+.copyrightText{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+}
+copyrightText a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*Responsive method*/
+@media (max-width: 767px){
+    section{
+        padding: 40px;
+    }
+    .banner .content h2{
+        font-size: 2.5em;
+    }
+    .banner .content p{
+        font-size: 1em;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .contentBx,
+    .about .imbBx{
+        min-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+    }
+    .about .imbBx{
+        min-height: 250px;
+    }
+    .btn{
+        margin-bottom: 30px;
+    }
+    .destination .destinationList .box{
+        position: relative;
+        max-width: 350px;
+        min-width:inherit;
+        width: 350px;
+        height: 480px;    
+    }
+    .destination .destinationList .box .imbBx{
+        height: 320px;
+    }
+    .footer .sci li a img{
+        filter: invert(1);
+        max-width: 30px;
+    }
+}
+header{
+    padding: 20px;
+}
+.glass{
+    width: 0;
+    top: 75px;
+}
+section .navigation {
+    top: 30%;
+    left: 37%;
+}
+.header_sub .logo {
+    font-size: 1.7em;
+    left: 50px;
+}
+
+@media (max-width: 320px){
+    .header_sub .logo {
+        font-size: 1.25em; 
+        font-weight: 700;
+        left: 6px;
+    }
+    section .navigation {
+        top: 29%;
+        left: 10%;
+
+    }
+    .header_sub .toggle {
+
+        margin-right: 8px;
+    }
+    .header_sub .toggle:before {
+        margin-right: 5px;
+
+    }
+    .glass {
+        top: 70px;
+    }
+    .header_sub .toggle.active {
+        margin-right: 0px;
+    }
+    .header_sub .toggle.active:before {
+        right: 37px;
+    }
+
+}
+
+@media (max-width: 1367px){
+    section .navigation {
+        top: 30%;
+        left: 44%;
+    }}

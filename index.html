@@ -1,0 +1,195 @@
+<?php
+include './showErros.php';
+?>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>H O M E</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <link rel="shortcut icon" href="imags/w1.png">
+    </head>
+    <body>
+        <section class="header_sub">
+            <header class=" section_sub header_sub ">  
+
+                <a href="#" class="logo">Ceylon LAKSHA</a>
+                <div class="glass"></div>
+                <div class="toggle" onclick="menuToggle()"></div>
+
+                <ul class="navigation">
+                    <li style="--j:1"><a href="index.html">Home</a></li>
+                    <li style="--j:2"><a href="admin_login.php">LogIn</a></li>
+                    <li style="--j:2"><a href="our_product.php">Our Products</a></li>
+                    <li style="--j:3"><a href="cart.php">Cart</a></li>
+                    <li style="--j:4"><a href="about_us.php">About Us</a></li>
+                    <li style="--j:5"><a href="contact_us.php">Contact Us</a></li>
+                    <li style="--j:6"><a href="admin_login_logout.php">LogOut</a></li>
+                </ul> 
+            </header>
+        </section>
+
+        <script type="text/javascript">
+            function menuToggle() {
+                const toggleMenu = document.querySelector('.toggle');
+                const section = document.querySelector('section');
+                toggleMenu.classList.toggle('active');
+                section.classList.toggle('active');
+            }
+        </script>
+
+        <!--first page start-->
+        <section class="banner">
+            <img src="img/home.jpg" class="fitBg">
+            <div class="content">
+                <h2 style="text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.925);">Laksha Industry...</h2>
+                <p style="text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.925);">Laksha industry has a special place in Sri Lankan Sinhala culture. 
+                    They use natural materials for this progress. Even though the stuff that comes out from the Laksha i
+                    nsect is colourless, they add various colours and make them colourful. ... 
+                    The colours of the campaign which going be used are warm colours.
+                </p>
+                <a href="https://www.behance.net/gallery/25980329/Sri-Lanka-Laksha-Industry-(Tradition-to-modernism)" class="btn">Learn More</a>
+            </div>
+        </section>
+        <!--first page end-->
+
+        <!--Laksha Industry start-->
+        <section class="about" id="about">
+            <div class="contentBx">
+                <h2 class="titleText">Laksha Industry</h2>
+                <p class="text">Laksha industry has a special place in Sri Lankan Sinhala culture. 
+                    They use natural materials for this progress. Even though the stuff that comes out from the Laksha i
+                    nsect is colourless, they add various colours and make them colourful... 
+                    The colours of the campaign which going be used are warm colours.
+
+                    Laksha industry has a special place in Sri Lankan Sinhala culture. 
+                    They use natural materials for this progress. Even though the stuff that comes out from the Laksha i
+                    nsect is colourless, they add various colours and make them colourful... 
+                    The colours of the campaign which going be used are warm colours.</p>
+                <a href="https://digixanimo.com/creativity/laksha-industry-traditional-art/" class="btn">Learn More</a>
+            </div>
+
+            <div class="imbBx">
+                <img src="img/a.jpg" class="fitBg">
+            </div>
+        </section>
+        <!--Laksha Industry end-->
+
+        <!--banner 2 start-->
+        <section class="banner2">
+            <img src="img/banner2.jpg" class="fitBg">
+        </section>
+        <!--banner 2 end-->
+
+        <!--About Laksha start-->
+        <section class="about" id="about">
+            <div class="contentBx">
+                <h2 class="titleText">About Laksha </h2>
+                <p class="text">Sri Lanka officially the Democratic Socialist Republic of Sri Lanka (formerly known as Ceylon) is an 
+                    island country in South Asia, located in the Indian Ocean southwest of the Bay of Bengal and southeast of the Arabian Sea. 
+                    Sri Lanka has been called “the pearl of the Indian ocean” because of its shape and location. It is geographically 
+                    separated from the Indian subcontinent by the Gulf of Mannar and the Palk Strait. Sri Jayawardenepura Kotte is its legislative 
+                    capital, and Colombo is its largest city and centre of commerce.</p>
+                <a href="https://www.behance.net/gallery/25980329/Sri-Lanka-Laksha-Industry-(Tradition-to-modernism)" class="btn">Learn More</a>
+            </div>
+
+
+            <div class="imbBx">
+                <img src="img/b.jpg" class="fitBg">
+            </div>
+        </section>
+        <!--About Laksha end-->
+
+        <!--video end-->
+        <div>
+            <video class="banner_video" controls="autoplay">
+                <source src="video/laksha.mp4" type="video/mp4"/>
+            </video>
+        </div>
+        <!--video end-->
+
+        <!--banner 2 start-->
+        <section class="banner2">
+            <img src="img/banner3.jpg" class="fitBg">
+        </section>
+        <!--banner 2 end-->
+
+
+        <!--Industries start-->
+        <section class="destination" id="destination">
+            <div class="content">
+                <h2 class="titleText">Laksha Industries</h2>
+                <p class="text">Laksha industry has a special place in Sri Lankan Sinhala culture. 
+                    They use natural materials for this progress. Even though the stuff that comes out from the Laksha i
+                    nsect is colourless, they add various colours and make them colourful... 
+                    The colours of the campaign which going be used are warm colours.
+
+                    Laksha industry has a special place in Sri Lankan Sinhala culture. 
+                    They use natural materials for this progress. Even though the stuff that comes out from the Laksha i
+                    nsect is colourless, they add various colours and make them colourful... 
+                    The colours of the campaign which going be used are warm colours.</p>
+            </div>
+            <!--Industries end-->
+
+
+            <!--item start-->
+            <div class="destinationList">
+                <div class="box">
+                    <div class="imbBx">
+                        <a href="#"> <img src="img/threeof1.jpg" class="fitBg"></a>
+                    </div>
+                    <div class="content">
+                        <a style="text-decoration: none;" href="#"><h2>Colourful Ceramic items<br><span></span></h2></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imbBx">
+                        <a href="https://www.srilankabusiness.com/ceramic-and-porcelain/"> <img src="img/threeof2.jpg" class="fitBg"></a>
+                    </div>
+                    <div class="content">
+                        <a style="text-decoration: none;" href="https://www.exjourneys.com/design-your-own-traditional-%E2%80%98sesath%E2%80%99.html"> <h2>Sri Lankan Traditional Sesath<br><span></span></h2></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imbBx">
+                       <a href="#"> <img src="img/threeof3.jpg" class="fitBg"></a>
+                    </div>
+                    <div class="content">
+                        <a style="text-decoration: none;" href="https://www.pinterest.com/pin/819866307155926650/"> <h2>Marks<br><span></span></h2> </a>
+                    </div>
+                </div>
+            </div>
+            <a href="http://infosys.lib.vpa.ac.lk/cgi-bin/koha/opac-detail.pl?biblionumber=6536&shelfbrowse_itemnumber=16502" class="btn">View More</a>
+        </section>
+        <!--item end-->
+
+        <!--banner 4 start-->
+        <section class="banner3">
+            <img src="img/banner4.jpg" class="fitBg">
+        </section>
+        <!--banner 4 end-->
+
+
+        <!--footer start-->
+        <section class="footer">
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/"><img src="img/facebook.png"></a></li>
+                <li><a href="https://twitter.com/"><img src="img/twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="img/instagram.png"></a></li>
+            </ul>
+            <h4 class="copyrightText">Copyright @2021 <a href="#" style="text-decoration: none; color: #ffffff;">REYGREN</a> Concept By Heshan Kulasooriya. All right reserved.</h4>
+        </section>
+        <!--footer end-->
+
+
+
+    </body>
+</html>

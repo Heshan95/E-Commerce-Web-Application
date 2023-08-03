@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2021, 2:25:29 AM
+    Author     : kulas
+*/
+
+*{    
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+.login-page{
+    background-image: url(img/banner_1.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.login-page:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    
+}
+.login-page .box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    z-index: 2;
+}
+.login-page .box .form-head h2{
+    text-align: center;
+    margin: 10px 0px 20px;
+    color: #ffffff;
+}
+.login-page .box .form-body{
+    display: flex;
+    flex-direction: column;
+}
+.login-page .box .form-body input{
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;background-color: transparent;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    border: solid;
+    transition: box-shadow 0.5s ease;
+}
+.login-page .box .form-body input:focus{
+    box-shadow:  0px 0px 15px white;
+}
+.login-page .box .form-body input::placeholder{
+    color: #ffffff;
+}
+.login-page .box .form-footer{
+    text-align: center;
+}
+.login-page .box .form-footer button{
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 50px;
+    color: #ffffff;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}
+.login-page .box .form-footer button:hover{
+    box-shadow:  0px 0px 15px white;
+}
